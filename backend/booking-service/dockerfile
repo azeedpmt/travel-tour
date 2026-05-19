@@ -1,0 +1,16 @@
+FROM node:20-alpine
+WORKDIR /app
+
+# 1. Define a default port argument (can be overridden during build)
+ARG PORT=8002
+# 2. Set it as an environment variable so your Node.js app can read it
+ENV PORT=$PORT
+
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+
+# 3. Expose the dynamic port
+EXPOSE $PORT
+
+CMD ["npm", "start"]

@@ -1,0 +1,135 @@
+version: '3.8'
+
+services:
+  # API Gateway
+  api-gateway:
+    build: ./backend/api-gateway
+    ports:
+      - "9000:9000"
+    environment:
+      - AUTH_SERVICE_URL=http://auth-service:8001
+      - BOOKING_SERVICE_URL=http://booking-service:8002
+      - DEAL_SERVICE_URL=http://deal-service:8003
+      - HOTEL_SERVICE_URL=http://hotel-service:8005
+      - FOOD_SERVICE_URL=http://food-service:8004
+      - PAYMENT_SERVICE_URL=http://payment-service:8006
+      - REALTIME_SERVICE_URL=http://realtime-service:8007
+      - ADMIN_SERVICE_URL=http://admin-service:8008
+    depends_on:
+      - auth-service
+      - booking-service
+      - deal-service
+      - hotel-service
+      - food-service
+      - payment-service
+      - realtime-service
+      - admin-service
+
+  # Auth Service
+  auth-service:
+    build: ./backend/auth-service
+    ports:
+      - "8001:8001"
+    environment:
+      - NODE_ENV=development
+      - JWT_SECRET=your_secret_key_change_in_production
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - ADMIN_SECRET_KEY=admin123
+      - TEST_MODE=true   # shows test login buttons (safe for development)
+      - MONGO_URI=mongodb://mongo:27017/auth
+    depends_on:
+      - mongo
+
+  # Booking Service
+  booking-service:
+    build: ./backend/booking-service
+    ports:
+      - "8002:8002"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/booking
+    depends_on:
+      - mongo
+
+  # Deal Service
+  deal-service:
+    build: ./backend/deal-service
+    ports:
+      - "8003:8003"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/deal
+    depends_on:
+      - mongo
+
+  # Food Service
+  food-service:
+    build: ./backend/food-service
+    ports:
+      - "8004:8004"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/food
+    depends_on:
+      - mongo
+
+  # Hotel Service
+  hotel-service:
+    build: ./backend/hotel-service
+    ports:
+      - "8005:8005"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/hotel
+    depends_on:
+      - mongo
+
+  # Payment Service
+  payment-service:
+    build: ./backend/payment-service
+    ports:
+      - "8006:8006"
+    environment:
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - MONGO_URI=mongodb://mongo:27017/payment
+    depends_on:
+      - mongo
+
+  # Realtime Service (WebSocket)
+  realtime-service:
+    build: ./backend/realtime-service
+    ports:
+      - "8007:8007"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/realtime
+    depends_on:
+      - mongo
+
+  # Admin Service
+  admin-service:
+    build: ./backend/admin-service
+    ports:
+      - "8008:8008"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/admin
+    depends_on:
+      - mongo
+
+  # Frontend (React + Vite)
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"        # if using nginx, otherwise expose 5173 for dev server
+    environment:
+      - VITE_API_URL=http://api-gateway:9000
+      - VITE_TEST_MODE=true   # enables test login buttons (safe for local Docker)
+    depends_on:
+      - api-gateway
+
+  # MongoDB (shared database – adjust if each service uses its own DB)
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
