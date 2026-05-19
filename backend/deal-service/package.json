@@ -1,0 +1,30 @@
+{
+  "name": "deal-service",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon --experimental-specifier-resolution=node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "amqplib": "^0.10.9",
+    "axios": "^1.5.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^7.5.0",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/express": "^4.17.25",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^20.19.39",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

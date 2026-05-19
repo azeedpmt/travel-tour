@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanMyLuxe | Luxury Holiday Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-gray-900 overflow-x-hidden">
+
+    <!-- HERO SECTION (No Navbar as requested) -->
+    <section id="hero" class="relative h-[80vh] flex items-center justify-center text-white overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+        <div class="text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-lg">PLAN MY LUXE</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto drop-shadow-md">Curating the world's most exclusive holiday escapes for 2026 & 2027.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#deals" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all shadow-xl">Explore Deals</a>
+                <a href="#" class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all">Tailor-Made Trips</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLASH LUXURY SALES (FIRE CAROUSEL) -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="flex items-center justify-center w-12 h-12 bg-red-600 rounded-full animate-pulse shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                    <i class="fas fa-fire text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold uppercase tracking-wider italic text-red-600">Flash Luxury Sales</h2>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative group">
+                <div id="flash-carousel" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    
+                    <!-- Flash Deal 1 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maldives" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 04:22:15</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Private Island Overwater Villa</h3>
+                                <p class="text-gray-500 text-sm mb-4">Maldives • 7 Nights • All-Inclusive</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£4,299</span>
+                                        <div class="text-3xl font-black text-red-600">£2,149</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 2 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dubai" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 02:10:45</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Royal Penthouse Experience</h3>
+                                <p class="text-gray-500 text-sm mb-4">Dubai • 5 Nights • Half-Board</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£2,850</span>
+                                        <div class="text-3xl font-black text-red-600">£1,425</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Flash Deal 3 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bali" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 08:45:12</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Sanctuary Jungle Pool Suite</h3>
+                                <p class="text-gray-500 text-sm mb-4">Bali • 10 Nights • Breakfast</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£1,950</span>
+                                        <div class="text-3xl font-black text-red-600">£975</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flash Deal 4 -->
+                    <div class="min-w-[300px] md:min-w-[400px] snap-start">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]" style="border: 2px solid #dc2626;">
+                            <img src="https://images.unsplash.com/photo-1540206276207-3af25c08abb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Santorini" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">Ends in 01:15:30</div>
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold mb-2">Clifftop Caldera View Villa</h3>
+                                <p class="text-gray-500 text-sm mb-4">Santorini • 4 Nights • Boutique Luxury</p>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <span class="text-gray-400 line-through text-sm">£3,100</span>
+                                        <div class="text-3xl font-black text-red-600">£1,550</div>
+                                    </div>
+                                    <button class="bg-black text-white px-6 py-2 rounded-lg font-bold hover:bg-red-600 transition-colors">SECURE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button onclick="scrollCarousel('flash-carousel', 'left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-xl w-12 h-12 rounded-full flex items-center justify-center text-black hover:bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="scrollCarousel('flash-carousel', 'right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-xl w-12 h-12 rounded-full flex items-center justify-center text-black hover:bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED SPOTLIGHT -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Resort" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white text-black p-6 rounded-2xl hidden md:block">
+                        <p class="text-sm font-bold uppercase mb-1">Editor's Pick</p>
+                        <p class="text-2xl font-black">Maldives 2026</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">The Ritz-Carlton Fari Islands</h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">Experience unparalled luxury in the heart of the Indian Ocean. Our exclusive partnership offers 35% off plus complimentary seaplane transfers for bookings made this month.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500" style="color: #d4af37;"></i> Private Pool in Every Villa</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500" style="color: #d4af37;"></i> 24/7 Dedicated Aris Meeha Butler</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500" style="color: #d4af37;"></i> Gastronomic Journey across 7 Restaurants</li>
+                    </ul>
+                    <button class="w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-all uppercase tracking-widest">View Spotlight Deal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIER DEAL CAROUSEL (New section after spotlight) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-2">Curated Collections</p>
+                    <h2 class="text-4xl font-bold">Trending Destinations</h2>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button onclick="scrollCarousel('premier-carousel', 'left')" class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-black hover:text-white transition-all"><i class="fas fa-arrow-left"></i></button>
+                    <button onclick="scrollCarousel('premier-carousel', 'right')" class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:bg-black hover:text-white transition-all"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div id="premier-carousel" class="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <!-- Card 1 -->
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541410945376-a78726dd9c82?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mauritius" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Trending</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Lux* Grand Baie</h3>
+                            <p class="text-gray-500 text-sm mb-4">Mauritius • Boutique Luxury</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£2,450<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Seychelles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Exclusive</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Four Seasons Desroches</h3>
+                            <p class="text-gray-500 text-sm mb-4">Seychelles • Private Island</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£4,100<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Japan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Must Visit</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Aman Tokyo</h3>
+                            <p class="text-gray-500 text-sm mb-4">Japan • Urban Sanctuary</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£1,890<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amalfi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Popular</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Belmond Hotel Caruso</h3>
+                            <p class="text-gray-500 text-sm mb-4">Italy • Amalfi Coast</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£3,200<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541410945376-a78726dd9c82?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mauritius" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Trending</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Lux* Grand Baie</h3>
+                            <p class="text-gray-500 text-sm mb-4">Mauritius • Boutique Luxury</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£2,450<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541410945376-a78726dd9c82?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mauritius" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Trending</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Lux* Grand Baie</h3>
+                            <p class="text-gray-500 text-sm mb-4">Mauritius • Boutique Luxury</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£2,450<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[280px] md:min-w-[350px] snap-start group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all h-full flex flex-col">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1541410945376-a78726dd9c82?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mauritius" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase">Trending</div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Lux* Grand Baie</h3>
+                            <p class="text-gray-500 text-sm mb-4">Mauritius • Boutique Luxury</p>
+                            <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
+                                <span class="text-2xl font-bold">£2,450<span class="text-sm font-normal text-gray-400">/pp</span></span>
+                                <i class="fas fa-arrow-right text-gray-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN DEAL GRID -->
+    <section id="deals" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center uppercase tracking-widest">Global Escapes 2026/27</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Grid Deal 1 -->
+                <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur text-white px-4 py-2 rounded-lg font-bold">From £1,299</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-blue-600 font-bold text-xs uppercase mb-2">Caribbean Escape</div>
+                        <h3 class="text-2xl font-bold mb-3">Sugar Beach, Viceroy</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">Stay in a luxury sugar mill room set within over 100 acres of pristine rainforest on the site of an 18th-century sugar plantation.</p>
+                        <div class="flex gap-2 flex-wrap mb-6">
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Direct Flights</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Breakfast Inc.</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Private Beach</span>
+                        </div>
+                        <button class="w-full py-4 border-2 border-black text-black font-bold rounded-xl hover:bg-black hover:text-white transition-all uppercase tracking-tighter">Request Itinerary</button>
+                    </div>
+                </div>
+
+                <!-- Grid Deal 2 -->
+                <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur text-white px-4 py-2 rounded-lg font-bold">From £2,150</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-blue-600 font-bold text-xs uppercase mb-2">Middle East Opulence</div>
+                        <h3 class="text-2xl font-bold mb-3">Atlantis The Royal</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">Experience the world's most ultra-luxury resort. A marvel of architectural design with 17 world-class restaurants.</p>
+                        <div class="flex gap-2 flex-wrap mb-6">
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Sky Pool Access</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">7 Nights</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Business Class</span>
+                        </div>
+                        <button class="w-full py-4 border-2 border-black text-black font-bold rounded-xl hover:bg-black hover:text-white transition-all uppercase tracking-tighter">Request Itinerary</button>
+                    </div>
+                </div>
+
+                <!-- Grid Deal 3 -->
+                <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-lg hover:shadow-2xl transition-all">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518732714860-b62714ce0c59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 bg-black/70 backdrop-blur text-white px-4 py-2 rounded-lg font-bold">From £3,400</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-blue-600 font-bold text-xs uppercase mb-2">Island Sanctuary</div>
+                        <h3 class="text-2xl font-bold mb-3">Soneva Jani</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">Inspiring a lifetime of rare experiences. Stay in an overwater villa with its own slide directly into the lagoon.</p>
+                        <div class="flex gap-2 flex-wrap mb-6">
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Private Slide</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Eco-Luxury</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded text-xs">Barefoot Butler</span>
+                        </div>
+                        <button class="w-full py-4 border-2 border-black text-black font-bold rounded-xl hover:bg-black hover:text-white transition-all uppercase tracking-tighter">Request Itinerary</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <h2 class="text-3xl font-black mb-6">PLAN MY LUXE</h2>
+                <p class="text-gray-500 leading-relaxed mb-6">Elevating the standard of luxury travel through expert curation and exclusive global partnerships.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-widest">Collections</h4>
+                <ul class="space-y-4 text-gray-500">
+                    <li><a href="#" class="hover:text-white transition-colors">Honeymoon Suites</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Private Villas</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Ski Resorts</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Island Retreats</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-widest">Contact</h4>
+                <ul class="space-y-4 text-gray-500">
+                    <li><i class="fas fa-phone mr-3"></i> +44 20 8000 0000</li>
+                    <li><i class="fas fa-envelope mr-3"></i> concierge@planmyluxe.co.uk</li>
+                    <li><i class="fas fa-map-marker-alt mr-3"></i> Mayfair, London</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-widest">Newsletter</h4>
+                <p class="text-gray-500 mb-6">Join our list for first-access to hidden deals.</p>
+                <div class="flex border-b border-gray-700 pb-2">
+                    <input type="email" placeholder="Your Email" class="bg-transparent outline-none w-full text-white placeholder-gray-600">
+                    <button class="text-white hover:text-gray-400 transition-colors uppercase text-sm font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-20 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm">
+            <p>© 2026 Plan My Luxe Ltd. All Rights Reserved. Luxury Reimagined.</p>
+        </div>
+    </footer>
+
+    <!-- CAROUSEL LOGIC -->
+    <script>
+        function scrollCarousel(id, direction) {
+            const container = document.getElementById(id);
+            const scrollAmount = container.clientWidth * 0.8;
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Automatic countdown for Flash Sales
+        function startCountdown() {
+            // Static mock logic for visual effect
+            console.log("Flash sale timers initialized...");
+        }
+
+        window.onload = function() {
+            startCountdown();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "payment-service",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon --experimental-specifier-resolution=node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/cors": "^2.8.19",
+    "@types/mongoose": "^5.11.96",
+    "amqplib": "^0.10.9",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.5.0",
+    "razorpay": "^2.9.6",
+    "stripe": "^13.11.0"
+  },
+  "devDependencies": {
+    "@types/concurrently": "^6.4.0",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.6.0",
+    "cloudinary": "^2.10.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

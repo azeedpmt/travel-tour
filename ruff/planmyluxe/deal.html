@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.6.1/dist/css/coreui.min.css" rel="stylesheet" integrity="sha384-q/at3GHMpO8VjBXzZ+ymx89MhqKtK9AcxYuECgmRq1b2a3797G4sfEM/ylqgywpd" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.6.1/dist/js/coreui.bundle.min.js" integrity="sha384-bfWw6UWgmz1820GDTev34DLTN/eDwwySOsuWriOxV32ZBfwFgiPaDzvOP+vG0Yur" crossorigin="anonymous"></script>
+  <title>Travel Deal Page</title>
+
+  <style>
+    :root {
+      --primary-pink: #CB2187;
+      --primary-pink-dark: #C82187;
+    }
+    .sidebar-card {
+      max-width: 420px;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    .btn-pink { background: linear-gradient(135deg, var(--primary-pink-dark), #ED0791); border: none; }
+    .btn-pink:hover { background: linear-gradient(135deg, #b01b74, var(--primary-pink-dark)); }
+    .btn-outline-pink { color: var(--primary-pink); border-color: var(--primary-pink); }
+    .btn-outline-pink:hover { background-color: var(--primary-pink); color: white; }
+    .btn-whatsapp { background-color: #25D366; border-color: #25D366; }
+    .btn-whatsapp:hover { background-color: #20b859; border-color: #20b859; }
+    .calendar-day { 
+      height: 36px !important; 
+      font-size: 12px; 
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .calendar-day:hover { background-color: #fce7f3 !important; transform: scale(1.02); }
+    .selected-date { 
+      background-color: var(--primary-pink) !important; 
+      color: white !important; 
+      box-shadow: 0 4px 12px rgba(203,33,135,0.4);
+    }
+    .form-select-custom:focus {
+      border-color: var(--primary-pink);
+      box-shadow: 0 0 0 0.2rem rgba(203,33,135,0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans">
+
+  <!-- MAIN PAGE -->
+  <div class="w-full max-w-[1440px] mx-auto px-4 md:px-8 py-6">
+
+    <!-- TOP TITLE -->
+    <div class="flex flex-col lg:flex-row justify-between gap-6 mb-6">
+
+      <div class="max-w-[850px]">
+        <h1 class="text-[32px] leading-[42px] font-bold text-[#CB2187]">
+          Premium Srebreno: Stylish Dubrovnik Coast Escape Including A Romantic Sunset Cruise
+        </h1>
+
+        <p class="text-[#595858] text-[18px] mt-2 font-medium">
+          Exclusive offer to Plan My Luxe - Hurry Limited Seats and Availability - Selling Fast!!!
+        </p>
+      </div>
+
+      <!-- PRICE CARD -->
+      <div class="flex flex-col items-end">
+
+        <div class="flex items-center gap-3 mb-2">
+
+          <div class="bg-[#25D366] text-white text-[13px] px-3 py-1 rounded font-semibold">
+            Save 13%
+          </div>
+
+          <div class="relative text-[#595858] font-bold text-[18px]">
+            £410
+            <div class="absolute left-0 top-[50%] w-full h-[2px] bg-[#595858] rotate-[-10deg]"></div>
+          </div>
+        </div>
+
+        <div class="flex items-end">
+          <span class="text-[#CB2187] text-[18px] font-medium mr-1 mb-1">from</span>
+
+          <span class="text-[#CB2187] text-[44px] font-bold leading-none">
+            £369
+          </span>
+
+          <span class="text-[#CB2187] text-[24px] mb-1">/pp</span>
+        </div>
+
+        <div class="text-[13px] text-[#595858] mt-1">
+          £357 + £12 (Local Tax)
+        </div>
+
+        <button
+          class="mt-4 w-[190px] h-[60px] rounded-lg text-white font-bold text-[18px]"
+          style="background:linear-gradient(to bottom,#ED0791,#CB2187)"
+        >
+          Enquiry Now
+        </button>
+
+      </div>
+    </div>
+
+    <!-- IMAGE SECTION -->
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
+
+      <!-- BIG IMAGE -->
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+          class="w-full h-[500px] object-cover rounded-xl"
+        />
+      </div>
+
+      <!-- SIDE IMAGES -->
+      <div class="grid grid-rows-2 gap-4">
+
+        <img
+          src="https://images.unsplash.com/photo-1493558103817-58b2924bce98"
+          class="w-full h-[242px] object-cover rounded-xl"
+        />
+
+        <div class="relative">
+
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+            class="w-full h-[242px] object-cover rounded-xl"
+          />
+
+          <button class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg text-[#CB2187] font-semibold flex items-center gap-2">
+
+            📷 More Images
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SHARE BUTTON -->
+    <div class="flex justify-end mt-6">
+
+      <button class="bg-[#9F9F9F] hover:bg-[#7d7d7d] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2">
+        🔗 Share This Offer
+      </button>
+
+    </div>
+
+    <!-- CONTENT AREA -->
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 mt-10">
+
+      <!-- LEFT CONTENT -->
+      <div>
+
+        <!-- STARS -->
+        <div class="flex items-center gap-1 mb-4">
+
+          <span class="text-[#CB2187] text-[20px]">★</span>
+          <span class="text-[#CB2187] text-[20px]">★</span>
+          <span class="text-[#CB2187] text-[20px]">★</span>
+          <span class="text-[#CB2187] text-[20px]">★</span>
+          <span class="text-gray-300 text-[20px]">★</span>
+
+        </div>
+
+        <!-- HOTEL NAME -->
+        <h2 class="text-[34px] font-bold text-[#242F40]">
+          Premium Apartments Srebreno
+        </h2>
+
+        <!-- LOCATION -->
+        <div class="flex items-center gap-2 text-[#595858] mt-3 font-semibold tracking-wide uppercase">
+
+          📍 Croatia - Dubrovnik
+
+        </div>
+
+        <!-- DESCRIPTION -->
+        <p class="text-[#595858] text-[17px] leading-[32px] mt-6">
+
+          Premium Apartments Srebreno offers stylish, self-catering accommodation just moments from the beach in a peaceful coastal setting.
+
+          Ideal for couples and families wanting flexibility and space, these contemporary apartments combine modern comforts with easy access to Dubrovnik.
+
+          Expect relaxed surroundings and a convenient base for exploring.
+
+        </p>
+
+
+        <!-- ABOUT DEAL SECTION -->
+<div class="mt-14">
+
+  <h2 class="text-[34px] font-bold text-[#242F40] mb-6">
+    About the deal
+  </h2>
+
+  <p class="text-[#595858] text-[17px] leading-[34px]">
+    With this deal you can enjoy exclusive member prices at up to 13% off high street or online travel agents as well as other inclusive extras.
+  </p>
+
+  <!-- WHAT INCLUDED -->
+  <div class="mt-10">
+
+    <h3 class="text-[28px] font-bold text-[#CB2187] mb-5">
+      What's Included:
+    </h3>
+
+    <div class="space-y-4">
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          Return Flights from/to the UK
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          All known current airport and security charges.
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          One piece of hand baggage per person.
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          FREE Airport Fastrack Security (*if available)
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          5 Night Accommodation at exclusive PlanMyLuxe rates
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          Board Basis: Room Only
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          Tours and excursions as stated
+        </p>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="text-[#CB2187] text-[20px]">✓</div>
+        <p class="text-[#595858] text-[17px]">
+          The services of PlanMyLuxe local representative's or holiday support centre
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EXCURSION -->
+  <div class="mt-14 bg-[#FFF5FB] border border-[#ffd5ef] rounded-2xl p-8">
+
+    <h3 class="text-[30px] font-bold text-[#CB2187] mb-6">
+      Excursion Included:
+      Romantic Sunset Cruise with Unlimited Drinks
+    </h3>
+
+    <p class="text-[#595858] text-[17px] leading-[34px]">
+      Set off on a memorable 45-minute sunset boat trip from the charming harbour of Cavtat.
+      As golden hour unfolds, cruise across the tranquil waters of Župa Bay, soaking in stunning Adriatic views and the beauty of the surrounding coastline.
+
+      Enjoy unlimited drinks on board, adding a touch of indulgence to this relaxing experience.
+    </p>
+
+    <p class="text-[#595858] text-[17px] leading-[34px] mt-5">
+      Take in panoramic scenes of picturesque coastal villages framed by lush greenery and shimmering sea—perfect for capturing unforgettable moments.
+
+      Pass by Mlini, known for its historic watermills and peaceful promenade, and Srebreno, where a vibrant atmosphere meets traditional Dalmatian charm along its popular pebble beach.
+    </p>
+
+  </div>
+
+  <!-- WHY LOVE -->
+  <div class="mt-14">
+
+    <h3 class="text-[30px] font-bold text-[#242F40] mb-8">
+      Why we love this hotel
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Apartment-style accommodation
+        </h4>
+      </div>
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Close to the beach
+        </h4>
+      </div>
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Modern, spacious interiors
+        </h4>
+      </div>
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Peaceful Srebreno location
+        </h4>
+      </div>
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Easy access to Dubrovnik
+        </h4>
+      </div>
+
+      <div class="border rounded-xl p-5 shadow-sm bg-white">
+        <h4 class="font-semibold text-[18px] text-[#242F40]">
+          Ideal for flexible self-catering stays
+        </h4>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DISCOVER -->
+  <div class="mt-16 bg-[#CB2187] rounded-3xl p-10 text-center">
+
+    <h2 class="text-white text-[36px] font-bold">
+      TOP TRENDING DEALS
+    </h2>
+
+    <p class="text-white text-[20px] mt-3">
+      DISCOVER EXCLUSIVES
+    </p>
+
+    <button class="mt-8 bg-white text-[#CB2187] font-bold px-10 py-4 rounded-full text-[18px]">
+      Click Here
+    </button>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+
+      <div class="bg-white rounded-2xl p-6">
+        <h4 class="font-bold text-[#242F40] text-[20px]">
+          Call Us
+        </h4>
+
+        <p class="text-[#595858] mt-2">
+          Our team are available 24 hours, 7 days
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6">
+        <h4 class="font-bold text-[#242F40] text-[20px]">
+          Chat Online
+        </h4>
+
+        <p class="text-[#595858] mt-2">
+          Speak directly with our travel experts
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6">
+        <h4 class="font-bold text-[#242F40] text-[20px]">
+          Whatsapp
+        </h4>
+
+        <p class="text-[#595858] mt-2">
+          Message us anytime for instant support
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SMALL NAV TABS -->
+  <div class="mt-16">
+
+    <div class="flex flex-wrap gap-4 border-b pb-4">
+
+      <button onclick="showTab('hotel')" class="tabBtn bg-[#CB2187] text-white px-6 py-3 rounded-full font-semibold">
+        Hotel Details
+      </button>
+
+      <button onclick="showTab('location')" class="tabBtn bg-gray-100 px-6 py-3 rounded-full font-semibold">
+        Location
+      </button>
+
+      <button onclick="showTab('facilities')" class="tabBtn bg-gray-100 px-6 py-3 rounded-full font-semibold">
+        Facilities
+      </button>
+
+      <button onclick="showTab('reviews')" class="tabBtn bg-gray-100 px-6 py-3 rounded-full font-semibold">
+        Reviews
+      </button>
+
+      <button onclick="showTab('fineprint')" class="tabBtn bg-gray-100 px-6 py-3 rounded-full font-semibold">
+        Fine Print
+      </button>
+
+    </div>
+
+    <!-- HOTEL DETAILS -->
+    <div id="hotel" class="tabContent mt-8">
+
+      <h3 class="text-[28px] font-bold text-[#242F40] mb-5">
+        Hotel Details
+      </h3>
+
+      <p class="text-[#595858] text-[17px] leading-[34px]">
+        Premium Apartments Srebreno combines modern apartment living with the charm of Croatia’s stunning coastline.
+        Spacious interiors, relaxing surroundings, and proximity to Dubrovnik make it perfect for couples and families.
+      </p>
+
+    </div>
+
+    <!-- LOCATION -->
+    <div id="location" class="tabContent hidden mt-8">
+
+      <h3 class="text-[28px] font-bold text-[#242F40] mb-5">
+        Location
+      </h3>
+
+      <div class="rounded-2xl overflow-hidden">
+
+        <iframe
+          src="https://maps.google.com/maps?q=Dubrovnik&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-[400px] border-0 rounded-2xl"
+        ></iframe>
+
+      </div>
+
+      <p class="mt-5 text-[#595858] text-[17px]">
+        Premium Apartments Srebreno,
+        Dubrovnik Coast,
+        Croatia
+      </p>
+
+    </div>
+
+    <!-- FACILITIES -->
+    <div id="facilities" class="tabContent hidden mt-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="border rounded-xl p-5">Free WiFi</div>
+        <div class="border rounded-xl p-5">Swimming Pool</div>
+        <div class="border rounded-xl p-5">Beach Access</div>
+        <div class="border rounded-xl p-5">Airport Transfer</div>
+        <div class="border rounded-xl p-5">Family Rooms</div>
+        <div class="border rounded-xl p-5">Restaurant</div>
+
+      </div>
+
+    </div>
+
+    <!-- REVIEWS -->
+    <div id="reviews" class="tabContent hidden mt-8">
+
+      <div class="space-y-6">
+
+        <div class="border rounded-2xl p-6">
+
+          <div class="flex items-center justify-between">
+
+            <h4 class="font-bold text-[20px]">
+              Sarah Williams
+            </h4>
+
+            <div class="text-[#CB2187]">
+              ★★★★★
+            </div>
+
+          </div>
+
+          <p class="mt-4 text-[#595858] leading-[32px]">
+            Amazing location and beautiful apartment. Loved the sunset cruise and friendly staff.
+          </p>
+
+        </div>
+
+        <div class="border rounded-2xl p-6">
+
+          <div class="flex items-center justify-between">
+
+            <h4 class="font-bold text-[20px]">
+              John Peterson
+            </h4>
+
+            <div class="text-[#CB2187]">
+              ★★★★☆
+            </div>
+
+          </div>
+
+          <p class="mt-4 text-[#595858] leading-[32px]">
+            Great holiday package with excellent facilities and easy access to Dubrovnik.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FINE PRINT -->
+    <div id="fineprint" class="tabContent hidden mt-8">
+
+      <p class="text-[#595858] text-[17px] leading-[34px]">
+        Prices are subject to availability and may change without notice.
+        Local taxes may apply.
+        Terms and conditions apply.
+      </p>
+
+    </div>
+
+  </div>
+
+ <!-- SIMILAR HOTELS CAROUSEL -->
+<div class="mt-16 w-full overflow-hidden">
+  <h2 class="text-[32px] font-bold text-[#242F40] mb-8 text-center">
+    Similar Hotels
+  </h2>
+
+  <!-- CAROUSEL WRAPPER -->
+  <div class="relative w-full">
+    
+    <!-- BOOTSTRAP CAROUSEL -->
+    <div id="hotelCarousel" class="carousel slide w-full" data-bs-ride="carousel" data-bs-interval="5000">
+      
+      <!-- CAROUSEL INNER -->
+      <div class="carousel-inner">
+        
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4 justify-content-center px-3 mx-0">
+            
+            <!-- CARD 1 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" 
+                       class="w-full h-full object-cover" alt="Hotel Riviera">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Hotel Riviera
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Croatia • Beach Resort
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Luxury coastal escape with premium facilities.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£299</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" 
+                       class="w-full h-full object-cover" alt="Sea Breeze Resort">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Sea Breeze Resort
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Dubrovnik • Luxury Stay
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Elegant resort with sea views and pools.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£349</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" 
+                       class="w-full h-full object-cover" alt="Luxe Paradise">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Luxe Paradise
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Montenegro • Premium Escape
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Contemporary hotel with spa and pool.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£429</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a" 
+                       class="w-full h-full object-cover" alt="Ocean View Hotel">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Ocean View Hotel
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Greece • Sea Facing
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Modern suites with sea-facing balconies.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£389</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+          <div class="carousel-item">
+          <div class="row g-4 justify-content-center px-3 mx-0">
+            
+            <!-- CARD 1 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" 
+                       class="w-full h-full object-cover" alt="Hotel Riviera">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Hotel Riviera
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Croatia • Beach Resort
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Luxury coastal escape with premium facilities.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£299</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" 
+                       class="w-full h-full object-cover" alt="Sea Breeze Resort">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Sea Breeze Resort
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Dubrovnik • Luxury Stay
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Elegant resort with sea views and pools.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£349</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" 
+                       class="w-full h-full object-cover" alt="Luxe Paradise">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Luxe Paradise
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Montenegro • Premium Escape
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Contemporary hotel with spa and pool.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£429</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-lg-3 col-md-6 col-12 px-1">
+              <div class="bg-white rounded-[20px] overflow-hidden shadow-md border border-[#ececec] h-[320px] flex flex-col">
+                <div class="w-full h-[140px] overflow-hidden flex-shrink-0">
+                  <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a" 
+                       class="w-full h-full object-cover" alt="Ocean View Hotel">
+                </div>
+                <div class="flex flex-col justify-between flex-1 p-[6px]">
+                  <div class="pr-[2px]">
+                    <div class="flex gap-1 text-[13px] text-[#CB2187] mb-[3px]">
+                      ★ ★ ★ ★ ☆
+                    </div>
+                    <h3 class="text-[16px] font-bold text-[#242F40] mb-[2px] leading-tight truncate">
+                      Ocean View Hotel
+                    </h3>
+                    <p class="text-[#777] text-[12px] mb-[3px] truncate">
+                      Greece • Sea Facing
+                    </p>
+                    <p class="text-[#595858] text-[12px] leading-[15px] mb-0 line-clamp-2">
+                      Modern suites with sea-facing balconies.
+                    </p>
+                  </div>
+                  <div class="mt-[2px]">
+                    <div class="flex items-end gap-1 mb-[3px]">
+                      <span class="text-[#CB2187] text-[20px] font-bold">£389</span>
+                      <span class="text-[#777] text-[11px]">/ person</span>
+                    </div>
+                    <button class="w-full h-[32px] rounded-full text-white font-bold text-[12px] border-0 mt-[1px]"
+                            style="background:linear-gradient(to bottom,#ED0791,#CB2187)">
+                      View Deal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- CAROUSEL INDICATORS -->
+      <div class="carousel-indicators absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 pb-2">
+        <button type="button" data-bs-target="#hotelCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hotelCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+
+    </div>
+
+    <!-- CUSTOM LEFT BUTTON -->
+    <button class="absolute top-[42%] left-2 -translate-y-1/2 w-[42px] h-[42px] z-20" 
+            type="button" data-bs-target="#hotelCarousel" data-bs-slide="prev">
+      <span class="flex items-center justify-center w-full h-full text-[#CB2187] text-[24px] font-bold rounded-full shadow-lg border"
+            style="background: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">‹</span>
+    </button>
+
+    <!-- CUSTOM RIGHT BUTTON -->
+    <button class="absolute top-[42%] right-2 -translate-y-1/2 w-[42px] h-[42px] z-20" 
+            type="button" data-bs-target="#hotelCarousel" data-bs-slide="next">
+      <span class="flex items-center justify-center w-full h-full text-[#CB2187] text-[24px] font-bold rounded-full shadow-lg border"
+            style="background: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">›</span>
+    </button>
+
+  </div>
+</div>
+</div>
+
+<!-- TAB SCRIPT -->
+<script>
+
+function showTab(tabId){
+
+  document.querySelectorAll('.tabContent').forEach(tab=>{
+    tab.classList.add('hidden');
+  });
+
+  document.getElementById(tabId).classList.remove('hidden');
+
+  document.querySelectorAll('.tabBtn').forEach(btn=>{
+    btn.classList.remove('bg-[#CB2187]');
+    btn.classList.remove('text-white');
+    btn.classList.add('bg-gray-100');
+  });
+
+  event.target.classList.remove('bg-gray-100');
+  event.target.classList.add('bg-[#CB2187]');
+  event.target.classList.add('text-white');
+
+}
+
+</script>
+
+
+        
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <!-- <div class="bg-white border rounded-2xl shadow-lg p-6 h-fit sticky top-5">
+
+        <h3 class="text-[22px] font-bold text-[#242F40] mb-6">
+          Check Availability
+        </h3>
+
+        <div class="space-y-4">
+
+          <div class="border rounded-lg px-4 py-4">
+            <p class="text-[13px] text-[#595858] mb-1">Departure</p>
+            <p class="font-semibold text-[18px]">Any London</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+
+            <div class="border rounded-lg px-4 py-4">
+              <p class="text-[13px] text-[#595858] mb-1">Nights</p>
+              <p class="font-semibold text-[18px]">5 Nights</p>
+            </div>
+
+            <div class="border rounded-lg px-4 py-4">
+              <p class="text-[13px] text-[#595858] mb-1">Board</p>
+              <p class="font-semibold text-[18px]">Breakfast</p>
+            </div>
+
+          </div>
+
+          <div class="border rounded-lg px-4 py-4">
+            <p class="text-[13px] text-[#595858] mb-1">Departure Date</p>
+            <p class="font-semibold text-[18px]">22 May 2026</p>
+          </div>
+
+          <button
+            class="w-full h-[58px] rounded-xl text-white text-[18px] font-bold mt-4"
+            style="background:linear-gradient(to bottom,#ED0791,#CB2187)"
+          >
+            Check Availability
+          </button>
+
+        </div>
+
+ 
+        <div class="mt-8 border-t pt-6">
+
+          <div class="flex items-center gap-3 mb-4">
+
+            <div class="w-12 h-12 rounded-full bg-[#CB2187] text-white flex items-center justify-center text-[20px]">
+              ☎
+            </div>
+
+            <div>
+              <p class="text-[#595858] text-[13px]">Call Us</p>
+              <p class="font-bold text-[#242F40] text-[18px]">
+                020 3740 0744
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex gap-3 mt-4">
+
+            <button class="flex-1 bg-[#25D366] text-white py-3 rounded-lg font-semibold">
+              WhatsApp
+            </button>
+
+            <button class="flex-1 border border-[#CB2187] text-[#CB2187] py-3 rounded-lg font-semibold">
+              Chat
+            </button>
+
+          </div>
+
+        </div>
+
+      </div> -->
+ 
+<div class="container-fluid p-3">
+  <div class="sidebar-card bg-white border border-light rounded-3 p-3 mx-auto sticky-top" style="top: 20px;">
+    
+    <!-- Action Buttons -->
+    <div class="row g-2 mb-3">
+      <div class="col-4">
+        <button class="btn btn-pink btn-sm w-100 py-2 fw-bold text-white shadow-sm">
+          <i class="fas fa-phone-alt me-1"></i>Call
+        </button>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-outline-pink btn-sm w-100 py-2 fw-bold">
+          <i class="fas fa-comment-dots me-1"></i>Chat
+        </button>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-whatsapp btn-sm w-100 py-2 fw-bold text-white shadow-sm">
+          <i class="fab fa-whatsapp me-1"></i>WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <h6 class="fw-bold text-dark mb-3 d-flex align-items-center">
+      <i class="fas fa-calendar-check text-danger me-2"></i>
+      Check Availability
+    </h6>
+
+    <!-- Form Controls -->
+    <form class="row g-2">
+      <!-- Departure -->
+      <div class="col-12">
+        <label class="form-label text-muted small mb-1">Departure</label>
+        <div class="input-group input-group-sm">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="fas fa-plane-departure text-danger"></i>
+          </span>
+          <select class="form-select form-select-custom border-start-0" style="border-radius: 0 0.375rem 0.375rem 0 !important;">
+            <option>Any London</option>
+            <option>Gatwick (LGW)</option>
+            <option>Heathrow (LHR)</option>
+            <option>Stansted (STN)</option>
+            <option>Luton (LTN)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Nights & Board -->
+      <div class="col-6">
+        <label class="form-label text-muted small mb-1">Nights</label>
+        <div class="input-group input-group-sm">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="fas fa-moon text-danger"></i>
+          </span>
+          <select class="form-select form-select-custom border-start-0" style="border-radius: 0 0.375rem 0.375rem 0 !important;">
+            <option>4 Nights</option>
+            <option>3 Nights</option>
+            <option>7 Nights</option>
+            <option>10 Nights</option>
+            <option>14 Nights</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <label class="form-label text-muted small mb-1">Board</label>
+        <div class="input-group input-group-sm">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="fas fa-utensils text-danger"></i>
+          </span>
+          <select class="form-select form-select-custom border-start-0" style="border-radius: 0 0.375rem 0.375rem 0 !important;">
+            <option>Bed And Breakfast</option>
+            <option>Room Only</option>
+            <option>Half Board</option>
+            <option>Full Board</option>
+            <option>All Inclusive</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Compact Calendar -->
+      <div class="col-12">
+        <div class="card border shadow-sm" style="height: 280px;">
+          <div class="card-header bg-light border-0 py-2">
+            <div class="row align-items-center g-1">
+              <div class="col-auto">
+                <button class="btn btn-sm btn-outline-secondary p-1">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+              </div>
+              <div class="col">
+                <select class="form-select form-select-sm bg-white border-0 fw-bold text-primary mx-1" style="font-size: 13px;">
+                  <option>May 2026</option>
+                  <option>Jun 2026</option>
+                  <option>Jul 2026</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-sm btn-outline-secondary p-1">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-2">
+            <div class="row text-center text-muted small fw-semibold mb-1">
+              <div class="col">M</div><div class="col">T</div><div class="col">W</div><div class="col">T</div><div class="col">F</div><div class="col">S</div><div class="col">S</div>
+            </div>
+            <div class="row g-1 mb-0">
+              <!-- Sample days - much more compact -->
+              <div class="col calendar-day bg-white border rounded text-center fw-medium selected-date">15<br><small class="text-white">£334</small></div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">16<br><small>£354</small></div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">17<br><small>£351</small></div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">18</div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">19</div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">20</div>
+              <div class="col calendar-day bg-white border rounded text-center fw-medium">21</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Info -->
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center p-2 bg-white border rounded shadow-sm">
+          <small class="text-danger"><i class="fas fa-plane me-1"></i>Flight from</small>
+          <small class="fw-bold text-dark">Stansted (STN)</small>
+        </div>
+      </div>
+    </form>
+
+    <!-- Pricing -->
+    <div class="border-top pt-3 mt-2">
+      <div class="d-flex justify-content-between align-items-baseline mb-1">
+        <small class="text-muted">Price per person</small>
+        <div>
+          <span class="text-danger fw-bold h5 mb-0">from </span>
+          <span class="text-danger fw-bold h4 mb-0">£334</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between small text-muted mb-2">
+        <span>(*Flights Included)</span>
+        <span>£328 + £6 (Local Tax)</span>
+      </div>
+      <div class="d-flex justify-content-between small">
+        <span>Quote Ref:</span>
+        <span class="fw-bold text-uppercase">Teff8a8t</span>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <button class="btn btn-pink w-100 py-3 fw-bold mt-3 shadow-lg text-white fs-5 rounded-3">
+      Enquiry Now
+    </button>
+
+    <!-- Trust Section - Ultra Compact -->
+    <div class="mt-3 p-2 bg-pink-50 border border-danger-subtle rounded-2 text-center">
+      <div class="text-uppercase fw-bold text-muted small mb-1">Trusted & Protected</div>
+      <div class="d-flex justify-content-around mb-2">
+        <div class="bg-light rounded px-2 py-1 small fw-monospace">TTA</div>
+        <div class="bg-light rounded-circle px-1 py-1 small fw-bold">ATOL</div>
+      </div>
+      <div class="mb-1">
+        <div class="d-flex justify-content-center gap-1 mb-1">
+          <i class="text-success fs-6">★</i><i class="text-success fs-6">★</i><i class="text-success fs-6">★</i><i class="text-success fs-6">★</i><i class="text-success fs-6">★</i>
+        </div>
+        <small class="text-muted">Trustpilot <strong>4.9</strong> | 7,735 reviews</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+   
+
+  </div>
+<!-- TRUST SECTION - 5 ICONS FULL WIDTH SINGLE ROW -->
+<section class="w-full bg-gradient-to-r from-[#f8f9fa] to-white py-16 px-4">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- MAIN TITLE -->
+    <div class="text-center mb-12 px-4">
+      <h2 class="text-[36px] font-bold text-[#242F40] mb-4 leading-tight">
+        Holidays you can trust....
+      </h2>
+      <p class="text-[18px] text-[#242F40] font-semibold mb-8 max-w-2xl mx-auto leading-relaxed">
+        We offer low deposits for as little as <span class="text-[#CB2187] font-bold">£29 per person</span>
+      </p>
+    </div>
+
+    <!-- 5 ICONS - FULL WIDTH SINGLE ROW -->
+    <div class="flex flex-nowrap overflow-x-auto gap-4 pb-6 -mx-4 px-4 scrollbar-hide bg-white rounded-lg shadow-sm">
+      
+      <!-- ICON 1: Payment -->
+      <div class="flex-shrink-0 w-[220px] bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#f5f5f5] flex flex-col items-center text-center min-h-[200px] justify-between">
+        <div class="w-14 h-14 bg-gradient-to-r from-[#ED0791] to-[#CB2187] rounded-lg flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-credit-card text-white text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-[#242F40] leading-tight">
+            Helpful spread the cost
+          </h3>
+          <p class="text-[#CB2187] font-semibold text-sm">payment options</p>
+        </div>
+      </div>
+
+      <!-- ICON 2: Support -->
+      <div class="flex-shrink-0 w-[220px] bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#f5f5f5] flex flex-col items-center text-center min-h-[200px] justify-between">
+        <div class="w-14 h-14 bg-gradient-to-r from-[#ED0791] to-[#CB2187] rounded-lg flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-headset text-white text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-[#242F40] leading-tight">
+            Our 24/7 support service -
+          </h3>
+          <p class="text-[#CB2187] font-semibold text-sm">always here to help you.</p>
+        </div>
+      </div>
+
+
+      <!-- ICON 2: Support -->
+      <div class="flex-shrink-0 w-[220px] bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#f5f5f5] flex flex-col items-center text-center min-h-[200px] justify-between">
+        <div class="w-14 h-14 bg-gradient-to-r from-[#ED0791] to-[#CB2187] rounded-lg flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-headset text-white text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-[#242F40] leading-tight">
+            Our 24/7 support service -
+          </h3>
+          <p class="text-[#CB2187] font-semibold text-sm">always here to help you.</p>
+        </div>
+      </div>
+
+
+      <!-- ICON 3: Price Match -->
+      <div class="flex-shrink-0 w-[220px] bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#f5f5f5] flex flex-col items-center text-center min-h-[200px] justify-between">
+        <div class="w-14 h-14 bg-gradient-to-r from-[#ED0791] to-[#CB2187] rounded-lg flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-tags text-white text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-[#242F40] leading-tight">
+            We'll price match any product
+          </h3>
+          <p class="text-[#CB2187] font-semibold text-sm">against any other retailer</p>
+        </div>
+      </div>
+
+      <!-- ICON 4: Bonded -->
+      <div class="flex-shrink-0 w-[220px] bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-[#f5f5f5] flex flex-col items-center text-center min-h-[200px] justify-between">
+        <div class="w-14 h-14 bg-gradient-to-r from-[#ED0791] to-[#CB2187] rounded-lg flex items-center justify-center mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+          <i class="fas fa-shield-alt text-white text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-base font-bold text-[#242F40] leading-tight">
+            Enjoy peace of mind with
+          </h3>
+          <p class="text-[#CB2187] font-semibold text-sm">fully bonded holidays</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- LEARN MORE BUTTON -->
+    <!-- LEARN MORE BUTTON -->
+<div class="flex items-center justify-center gap-9 mt-12">
+
+  <a 
+    href="#"
+    class="text-[#CB2187] text-lg font-bold underline"
+  >
+    Learn more about us
+  </a>
+
+  <button class="px-10 py-4 bg-gradient-to-r from-[#ED0791] to-[#CB2187] hover:from-[#CB2187] hover:to-[#ED0791] text-white text-lg font-bold rounded-[8px] shadow-xl hover:shadow-2xl transition-all duration-300 border-0">
+    chat us
+  </button>
+
+</div>
+
+  </div>
+</section>
+
+<style>
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+</style>
+</style>
+
+
+
+ <footer class="bg-[#0f172a] text-white py-24">
+        <div class="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="md:col-span-2">
+                <div class="font-bold text-3xl tracking-tighter mb-6">PLANMYLUXE</div>
+                <p class="text-gray-400 text-sm max-w-sm font-medium leading-relaxed">Redefining luxury travel through spontaneous exploration and curated comfort since 2012.</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] mb-6 text-gray-500">Contact</h4>
+                <p class="text-sm font-bold mb-2">020 8000 0000</p>
+                <p class="text-sm text-gray-400">concierge@planmyluxe.co.uk</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] mb-6 text-gray-500">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-bold uppercase tracking-widest text-[10px]">
+                    <li><a href="#" class="hover:text-white transition-colors">T&Cs</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1100px] mx-auto px-6 mt-20 pt-12 border-t border-white/5 text-center text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+            © 2026 PlanMyLuxe Holiday Group. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsis Hotel Group Offers | Premium Luxury Resort Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+
+    <!-- HERO SECTION -->
+    <section class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden" style="background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-white text-4xl md:text-6xl font-bold tracking-tight mb-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
+                Mitsis Hotel Group Offers
+            </h1>
+            <p class="text-white text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                Experience unparalleled Greek hospitality with our exclusive premium luxury resort deals.
+            </p>
+        </div>
+    </section>
+
+    <!-- SPOTLIGHT SECTION: CRETE -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border border-gray-100">
+            <div class="md:w-1/2 h-80 md:h-auto">
+                <img src="https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Crete Spotlight" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white">
+                <span class="text-yellow-600 font-bold uppercase tracking-widest text-sm mb-2">Greece - Crete Hot Deal</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">RG Village Crete</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    A simple and relaxed retreat nestled in the heart of Crete. Experience authentic Greek culture with modern luxury amenities. Perfect for those seeking a quiet getaway with world-class service and stunning Mediterranean views.
+                </p>
+                <div class="flex items-center gap-4">
+                    <button class="bg-black text-white px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-gray-800 transition-all">Explore Crete</button>
+                    <span class="text-xl font-bold">From £599pp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAROUSEL 1: 9 CARDS -->
+    <section class="max-w-full overflow-hidden py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 mb-8 flex justify-between items-center">
+            <h2 class="text-2xl font-bold uppercase tracking-tighter">Premium Collection</h2>
+            <div class="flex gap-2">
+                <button onclick="scrollGrid('carousel1', -300)" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-all">←</button>
+                <button onclick="scrollGrid('carousel1', 300)" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-all">→</button>
+            </div>
+        </div>
+        <div id="carousel1" class="flex gap-6 overflow-x-auto scroll-smooth px-4 pb-8 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <script>
+                const carousel1 = document.getElementById('carousel1');
+                for(let i=1; i<=9; i++) {
+                    carousel1.innerHTML += `
+                    <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                        <img src="https://picsum.photos/seed/mitsis${i}/400/250" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2">Mitsis Resort Option ${i}</h3>
+                            <p class="text-gray-500 text-sm mb-4">Luxury stay with premium breakfast and spa access included.</p>
+                            <p >⭐⭐⭐⭐⭐</p>
+                            <div class="flex justify-between items-center border-t pt-4">
+                                <span class="font-bold text-xl">£${500 + (i*50)}</span>
+                                <button class="text-xs font-bold uppercase underline">View Deal</button>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- ZIG-ZAG FEATURE SECTION: 4 CARDS -->
+    <section class="max-w-7xl mx-auto px-4 py-20 space-y-12">
+        <h2 class="text-3xl font-bold text-center mb-16 uppercase tracking-widest">Signature Experiences</h2>
+        
+        <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="md:w-1/2 h-64 md:h-96 w-full"><img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover"></div>
+            <div class="md:w-1/2 p-10 text-left">
+                <h3 class="text-2xl font-bold mb-4">Gastronomy Excellence</h3>
+                <p class="text-gray-600">Discover 24/7 dining across our diverse range of theme restaurants serving local and international flavors.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="md:w-1/2 h-64 md:h-96 w-full"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover"></div>
+            <div class="md:w-1/2 p-10 text-left">
+                <h3 class="text-2xl font-bold mb-4">Wellness & Serenity</h3>
+                <p class="text-gray-600">Rejuvenate your body and mind at our award-winning spas featuring traditional Greek treatments.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="md:w-1/2 h-64 md:h-96 w-full"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover"></div>
+            <div class="md:w-1/2 p-10 text-left">
+                <h3 class="text-2xl font-bold mb-4">Family Adventures</h3>
+                <p class="text-gray-600">Create lifelong memories with supervised kid clubs and water park fun for all ages.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl overflow-hidden shadow-xl">
+            <div class="md:w-1/2 h-64 md:h-96 w-full"><img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover"></div>
+            <div class="md:w-1/2 p-10 text-left">
+                <h3 class="text-2xl font-bold mb-4">Nightly Entertainment</h3>
+                <p class="text-gray-600">From live music to Broadway-style shows, our evenings are filled with magic and celebration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAROUSEL 2: 9 CARDS -->
+    <section class="max-w-full overflow-hidden py-12 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 mb-8 flex justify-between items-center">
+            <h2 class="text-2xl font-bold uppercase tracking-widest text-yellow-500">Trending Now</h2>
+            <div class="flex gap-2">
+                <button onclick="scrollGrid('carousel2', -300)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-all text-white">←</button>
+                <button onclick="scrollGrid('carousel2', 300)" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-all text-white">→</button>
+            </div>
+        </div>
+        <div id="carousel2" class="flex gap-6 overflow-x-auto scroll-smooth px-4 pb-8 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <script>
+                const carousel2 = document.getElementById('carousel2');
+                for(let i=10; i<=18; i++) {
+                    carousel2.innerHTML += `
+                    <div class="flex-shrink-0 w-80 bg-gray-900 rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+                        <img src="https://picsum.photos/seed/luxury${i}/400/250" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-2 text-white">Exclusive Offer ${i}</h3>
+                            <p class="text-gray-400 text-sm mb-4 italic">Available for a limited time only.</p>
+                             <p class="text-gray-400 text-sm mb-4 italic">⭐⭐⭐⭐⭐</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-xl text-yellow-500">£${400 + (i*20)}pp</span>
+                                <button class="bg-yellow-600 text-white px-4 py-2 rounded text-[10px] font-bold uppercase">Book Now</button>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- FLASH DEALS SECTION -->
+<section class="max-w-full overflow-hidden py-20 bg-gray-50">
+    
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto px-4 mb-8 flex justify-between items-center">
+        <h2 class="text-xl font-bold uppercase tracking-[0.3em] text-gray-400">
+            Flash Deals
+        </h2>
+
+        <div class="flex gap-2">
+            <button onclick="scrollCarousel(-1)"
+                class="w-8 h-8 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100 transition-all text-xs">
+                ←
+            </button>
+
+            <button onclick="scrollCarousel(1)"
+                class="w-8 h-8 rounded-full bg-white shadow flex items-center justify-center hover:bg-gray-100 transition-all text-xs">
+                →
+            </button>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="relative max-w-7xl mx-auto overflow-hidden px-4">
+
+        <div id="fireCarousel"
+            class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const fireImages = [
+        'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=400&q=80',
+        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80',
+        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80',
+        'https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=400&q=80',
+        'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80'
+    ];
+
+    const fireCarousel = document.getElementById('fireCarousel');
+
+    // CREATE CARDS
+    fireImages.forEach((img, i) => {
+        fireCarousel.innerHTML += `
+        <div class="min-w-full flex justify-center">
+            
+            <div class="relative group w-full max-w-4xl h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
+
+                <img src="${img}" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                <!-- Top Badge -->
+                <div class="absolute top-6 left-6">
+                    <div class="bg-white/95 px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+                        <span class="animate-pulse text-lg">🔥</span>
+                        <span class="text-xs font-black uppercase tracking-wider text-red-600">
+                            Flash Sale Active
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bottom Content -->
+                <div class="absolute bottom-8 left-8 text-white">
+                    <p class="text-sm font-bold uppercase tracking-[0.3em] text-yellow-400 mb-3">
+                        Limited Offer
+                    </p>
+
+                    <h3 class="text-4xl font-black mb-3">
+                        Amazing Destination ${i + 1}
+                    </h3>
+
+                    <p class="text-white/80 max-w-lg">
+                        Luxury stay with premium experience and exclusive discounts.
+                    </p>
+
+                    <button class="mt-6 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all">
+                        Explore Now
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+        `;
+    });
+
+    // SLIDER
+    let currentIndex = 0;
+
+    function scrollCarousel(direction) {
+        const totalCards = fireImages.length;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = totalCards - 1;
+        }
+
+        if (currentIndex >= totalCards) {
+            currentIndex = 0;
+        }
+
+        fireCarousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+</script>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-500 py-16 px-4 text-center border-t border-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-white text-2xl font-bold mb-8 tracking-widest uppercase">Mitsis × PlanMyLuxe</h2>
+            <div class="flex justify-center gap-8 mb-12 text-sm uppercase tracking-widest">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms</a>
+                <a href="#" class="hover:text-white transition-colors">Cookies</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p class="text-[10px] leading-loose max-w-lg mx-auto opacity-50">
+                © 2024 PlanMyLuxe Hotel Group. All rights reserved. Managed independently. All prices subject to availability.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SHARED CAROUSEL SCRIPT -->
+    <script>
+        function scrollGrid(id, amount) {
+            const el = document.getElementById(id);
+            el.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

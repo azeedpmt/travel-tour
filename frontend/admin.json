@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "__Host-GAPS",
+      "value": "1:bsrlIkes6NmC0uE8HO3Og9Kf04tVQg:je-NSVTdHqeTEos-",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1813740784.877795,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

@@ -1,0 +1,11 @@
+echo "node_modules/
+
+dist/
+build/
+.DS_Store
+*.log
+coverage/
+test-results/
+playwright-report/
+traveller.json
+admin.json" > .gitignore
